@@ -2,13 +2,16 @@ name: conversa
 
 on:
   push:
-      branches:
-              - main
+    branches:
+      - main
 
 jobs:
-    escrever-commit:
-        runs-on: ubuntu-latest
+  escrever-commit:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Nosso primeiro workflow
-              run:  "Nosso primeiro workflow"
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Nosso primeiro workflow
+        run: echo "Nosso primeiro workflow"
